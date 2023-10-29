@@ -21,6 +21,14 @@ This repository contains essential commands and operations for managing Kubernet
 - `kubectl delete deployment [depl_name]`: Delete a deployment.
 - `kubectl rollout restart deployment [depl_name]`: Get a deployment to restart all pods. Will use the latest version of an image if the pod spec has a tag of 'latest'.
 
+### Managing Services
+
+* Instructions for Deployment
+- `kubectl apply -f [depl name]` : Apply the configuration using the following command:
+- `kubectl get services` : Verify the service deployment:
+- `kubectl describe service [service name]` : Obtain detailed information about the service:
+- `kubectl logs service [service name]` : Check the logs for the service:
+
 ### After Updating K8S specs of deployment's image version to the latest
 
 - `kubectl rollout restart deployment [depl_name]`: Updating the Image Used By a Deployment - Best Engineering Method.
