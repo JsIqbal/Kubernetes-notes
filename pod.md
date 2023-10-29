@@ -1,0 +1,21 @@
+## UNDER CONSTRUCTION
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: posts-depl
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: posts
+    template:
+        metadata:
+            labels:
+                app: posts
+        spec:
+            containers:
+                - name: posts
+                  image: jskraken/posts
+```
