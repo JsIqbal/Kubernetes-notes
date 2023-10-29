@@ -20,6 +20,7 @@ This repository contains essential commands and operations for managing Kubernet
 - `kubectl apply -f [config file name]`: Create a deployment out of a configuration file.
 - `kubectl delete deployment [depl_name]`: Delete a deployment.
 - `kubectl rollout restart deployment [depl_name]`: Get a deployment to restart all pods. Will use the latest version of an image if the pod spec has a tag of 'latest'.
+- ` kubectl apply -f .` : Make deployment for all the deployment files in the directory
 
 ### Managing Services
 
