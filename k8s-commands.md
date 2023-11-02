@@ -12,6 +12,8 @@ This repository contains essential commands and operations for managing Kubernet
 - `kubectl delete pod [pod_name]`: Deletes the given pod.
 - `kubectl apply -f [config file name]`: Tells Kubernetes to process the configuration file.
 - `kubectl describe pod [pod_name]`: Print out some information about the running pod.
+- `kubectl delete pods --all`: delete all pods
+
 
 ### Managing Deployments
 
@@ -21,14 +23,17 @@ This repository contains essential commands and operations for managing Kubernet
 - `kubectl delete deployment [depl_name]`: Delete a deployment.
 - `kubectl rollout restart deployment [depl_name]`: Get a deployment to restart all pods. Will use the latest version of an image if the pod spec has a tag of 'latest'.
 - ` kubectl apply -f .` : Make deployment for all the deployment files in the directory
+- `kubectl delete deployments --all` : delete all deployments
+
 
 ### Managing Services
 
-* Instructions for Deployment
 - `kubectl apply -f [depl name]` : Apply the configuration using the following command:
 - `kubectl get services` : Verify the service deployment:
 - `kubectl describe service [service name]` : Obtain detailed information about the service:
 - `kubectl logs service [service name]` : Check the logs for the service:
+- `kubectl delete services --all` : delete all services
+
 
 ### After Updating K8S specs of deployment's image version to the latest
 
