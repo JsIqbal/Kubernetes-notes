@@ -1,4 +1,4 @@
-UNDER CONSTRUCTION
+# Cluster Ip Service: kubernetes object for pod communication with each other
 
 - cluster ip services are written on the same file as the deployment file for better engineering. one can create a different file for it if they want.
 
