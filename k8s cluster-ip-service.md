@@ -1,6 +1,6 @@
 # Cluster Ip Service: kubernetes object for pod communication with each other
 
-- cluster ip services are written on the same file as the deployment file for better engineering. one can create a different file for it if they want.
+-   cluster ip services are written on the same file as the deployment file for better engineering. one can create a different file for it if they want.
 
 ```yaml
 apiVersion: apps/v1
@@ -15,7 +15,7 @@ spec:
     template:
         metadata:
             labels:
-                app: posts
+                app: posts # This is the pod
         spec:
             containers:
                 - name: posts
@@ -27,9 +27,9 @@ metadata:
     name: posts-clusterip-srv
 spec:
     selector:
-        app: posts-clusterip
+        app: posts # The pod that is selected to use the cluster Ip service
     ports:
-        - name: posts-clusterip
+        - name: posts
           protocol: TCP
           port: 4000
           targetPort: 4000
